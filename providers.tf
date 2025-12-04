@@ -6,6 +6,9 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    aap = {
+      source = "ansible/aap"
+    }
   }
 }
 
@@ -18,12 +21,7 @@ provider "aws" {
     }
   }
 }
-
-terraform {
-  required_providers {
-    aap = {
-      source = "ansible/aap"
-    }
-  }
+provider "aap" {
+  host = "https://caap.fvz.ansible-labs.de/" # Also supports AAP_HOSTNAME environment variable
 }
 
