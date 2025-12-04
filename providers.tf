@@ -21,7 +21,4 @@ provider "aws" {
     }
   }
 }
-provider "aap" {
-  host = "https://caap.fvz.ansible-labs.de/" # Also supports AAP_HOSTNAME environment variable
-}
 
